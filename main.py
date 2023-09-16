@@ -128,3 +128,4 @@ class Job:
         self.gladness_less = job_list[self.job]["gladness_less"]
 
 person = Human(name="Nick")
+print("0")
