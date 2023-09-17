@@ -67,7 +67,7 @@ class Human:
                 return
         self.money += self.job.salary
         self.gladness -= self.job.gladness_less
-        self.satiety -= 4
+        self.satiety -= 3
 
     def shopping(self, manage):
         if self.car.drive():
@@ -84,25 +84,25 @@ class Human:
                 self.car.fuel += 100
             elif manage == "food":
                 print("Bought food")
-                self.money -= 50
-                self.home.food += 50
+                self.money -= 60
+                self.home.food += 65
             elif manage == "delicacies":
                 print("Hooray! Delicious!")
-                self.gladness += 10
+                self.gladness += 8
                 self.satiety += 2
-                self.money -= 15
+                self.money -= 13
 
     def chill(self):
-        self.gladness += 10
-        self.home.mess += 5
+        self.gladness += 8
+        self.home.mess += 6
 
     def clean_home(self):
-        self.gladness -= 5
+        self.gladness -= 7
         self.home.mess = 0
 
     def to_repair(self):
-        self.car.strength += 100
-        self.money -= 50
+        self.car.strength += 110
+        self.money -= 75
 
     def days_indexes(self, day):
         day = f" Today the {day} of{self.name}'s life "
@@ -128,7 +128,7 @@ class Human:
         if self.satiety < 0:
             print("Dead…")
             return False
-        if self.money < -500:
+        if self.money < -550:
             print("Bankrupt…")
             return False
 
